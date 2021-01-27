@@ -72,10 +72,12 @@ export const filterByName = (query) => async (dispatch) => {
         const movies = res.data.results;
        
         const filteredData = movies.filter(movie => {
-            return contains(movie, query);
-        });
-        // setAllMovies(filteredData);
-        
+            // return contains(movie, query);
+            if (movie.title.includes(query)) {
+                return true;
+            }
+            return false;
+        });        
         dispatch({
             type: FILTER_BY_NAME,
             payload: filteredData
@@ -85,10 +87,10 @@ export const filterByName = (query) => async (dispatch) => {
     }
 }
 
-const contains = ({ title }, query) => {
-    if (title.includes(query)) {
-        return true;
-    }
-    return false;
-};
+// const contains = ({ title }, query) => {
+//     if (title.includes(query)) {
+//         return true;
+//     }
+//     return false;
+// };
 
