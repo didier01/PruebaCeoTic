@@ -14,10 +14,9 @@ const Movie = ({ ROUTE }) => {
 
     const [search, setSearch] = useState('');
     const [newMovies, setNewMovies] = useState([]);
-    const [allMovies, setAllMovies] = useState(movies);
     const [imgStorage, setImgStorage] = useState([]);
 
-    // setAllMovies(movies);
+
 
     useEffect(() => {
         dispatch(getMovies());
@@ -27,11 +26,6 @@ const Movie = ({ ROUTE }) => {
 
     const filterList = (text) => {
         dispatch(filterByName(text));
-        // const formattedQuery = text.toLowerCase();
-        // const filteredData = movies.filter(movie => {
-        //     return contains(movie, formattedQuery);
-        // });
-        // setAllMovies(filteredData);
         setSearch(text)
     }
 

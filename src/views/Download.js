@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
 import RNFetchBlob from 'rn-fetch-blob';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
 import globalStyles from '../../styles/GlogalStyles'
-
-
 
 const Download = () => {
 
@@ -46,7 +43,7 @@ const Download = () => {
         setTimeout(() => {
             // getImagesStorage();
             setRefreshing(false)
-        }, 1500);
+        }, 1000);
     };
 
     return (

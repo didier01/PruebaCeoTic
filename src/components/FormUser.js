@@ -32,7 +32,6 @@ const FormUser = () => {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [image, setImage] = useState('/assetts/no_image.jpg');
-
     const [audios, setAudios] = useState([]);
     const [count, setCount] = useState(0);
 
